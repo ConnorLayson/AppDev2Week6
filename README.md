@@ -9,7 +9,15 @@ npm install
 npm run dev
 ```
 
-Create a production build with `npm run build`.
+Run the automated test suite with `npm test` (one run) or `npm run test:watch` (watch mode). Create a production build with `npm run build`.
+
+## Automated tests
+
+The Vitest + React Testing Library suite covers home-page rendering, product-card content and add-to-cart interaction, cart-item rendering/removal/quantity controls, and app-level cart restoration and `localStorage` persistence. Test setup is in `src/setupTests.js`.
+
+## Deploy to Vercel
+
+Push this repository to GitHub, import it into Vercel, and use the default Vite settings (`npm run build`, output directory `dist`). `vercel.json` includes an SPA rewrite so direct visits to routes such as `/products/mechanical-keyboard` resolve to the React app. After deployment, verify navigation and cart persistence in the deployed URL.
 
 ## Routes
 
